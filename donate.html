@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/wesaveanimals logo.png" type="image/x-icon">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>We Save Animals-Donate</title>
+</head>
+<body>
+    <div id="bar"></div>
+    <div id="container">
+        <div id="header">
+            <img id="logo" src="images/wesaveanimals logo.png" width="80px" height="80px">
+            <div id="menu">
+            <ul>
+                <b>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="services.html">SERVICES</a>
+                <ul class="dropdown">
+                    <li><a href="services.html#rescue">RESCUE OF INJURED & OLD STRAY ANIMALS</a></li>
+                    <li><a href="services.html#medical">MEDICAL TREATMENT</a></li>
+                    <li><a href="services.html#rehab">REHABILATION CENTRE</a></li>
+                    <li><a href="services.html#adopt">ADOPTION&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="services.html#volunteer">VOLUNTEER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                </ul></li>
+                <li><a href="gallery.html">GALLERY</a>
+                <ul class="dropdown">
+                    <li><a href="gallery.html#shelter">SHELTER PICTURES</a></li>
+                    <li><a href="gallery.html#rescue">RESCUE DIARIES</a></li>
+                    <li><a href="gallery.html#aware">AWARENESS PROGRAM</a></li>
+                </ul></li>
+                <li><a href="contactus.html">CONTACT US</a></li></b>
+                <a href="donate.html"><button id="donatebutton"><b>DONATE</b></button></a>
+            </div>
+        </div>
+        <div id="donatetitle"><p id="donateustitle"><b>Donate</b></p></div>
+        <div id="donate">
+            <div id="donateus">
+                <!-- <img id="donateimage" src="images/we?saveanimalsimages.png"> -->
+                
+                <div id="donatediv">
+                    <p id="donateheading">Make a Donation</p>
+                    <p>Your small gesture helps all creatures great and small.</p><br>
+                    <p>Please consider volunteering in our cause via monthly donations. Ongoing support ensures funds are available when most needed for the animals.</p><br>
+                    <p><b>Questions? </b><a href="contactus.html" style="text-decoration: none;color: black;"><i>click here to contact us.</i></a></p>
+                    <form action="#" method="post">
+                    <input class="donateinputstyle" type="text" placeholder="name" name="payee_name">
+                    <input class="donateinputstyle" type="email" placeholder="E-mail" name="description">
+                    <input class="donateinputstyle" type="text" placeholder="contact" name="contact">
+                    <!-- <label style="margin-left: 13px;">Enter the Amount:</label> -->
+                    <input type="number" class="donateinputstyle" id="amount" placeholder="Enter Amount" name="amount" >
+                    <button type="button" class="donateformsubmit" id="rzp-button1" onclick="pay_now()">Pay</button>
+                    <!-- <input type="submit"class="donateformsubmit" value="Donate Now"> -->
+                </form>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        <div id="socialmedia">
+            <p style="font-size:30px;color: white;">Follow Us on:&nbsp;<a href="https://www.facebook.com/WSA-We-Save-Animals-1663165890625653/?hc_ref=ARQ7vjLG3HV5adfBbiHtF6yOfhxAc-vHyBR6IC_l3cnIDUFiVYrMWs55MWhjJnGKdKw"><img class="icons" src="images/facebook.png"></a>&nbsp;<a href="https://www.instagram.com/invites/contact/?i=23fdh7it96ti&utm_content=38eqpv2"><img class="icons" src="images/instagram.png"></a>&nbsp;<a href="https://www.youtube.com/channel/UCoe7IQVULtg7o59XiWgIBSg"><img class="icons" src="images/youtube.png"></a>&nbsp;<a href="https://maps.app.goo.gl/wT9ZL3hq55VcUWzt6"><img class="icons" src="images/gmaps.png"></a></p>
+        </div>
+        <div id="subscribe">
+           <h1 style="color: white;">Subscribe.</h1>
+           <form action="subscribe.php" method="post">
+            <input class="input" type="text" placeholder="Name" name="name" required style="border:none; border-radius:5px;"><br>
+            <input class="input" type="email" placeholder="email" name="email" required style="border:none; border-radius:5px;"><br>
+            <input class="input grayknowmore" style="margin-right: 60px;padding: 5px 10px; width:80px ;" type="submit">
+           </form>
+        </div><br>
+        <div id="copyrights">
+            <p>&copy; 2020. We Save Animals (WSA) Welfare Trust.
+                All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script type="text/javascript">
+    function pay_now(){
+          //get the input from the form
+          var name = $("#payee_name").val();
+          var amount = $("#amount").val();
+          var actual_amount = amount*100;
+          var description = $('#description').val();
+          //var actual_amount = amount;
+          var options = {
+            "key": "rzp_test_xx28KfXBaypeQW", // Enter the Key ID generated from the Dashboard
+            "amount": actual_amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": name,
+            "description": description,
+            "image": "razorpay.png",
+            //"order_id": "order_IluGWxBm9U8zJ8", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "handler": function (response){
+                console.log(response);
+                $.ajax({
+ 
+                    url: 'process_payment.php',
+                    'type': 'POST',
+                    'data': {'payment_id':response.razorpay_payment_id,'amount':actual_amount,'name':name},
+                    success:function(data){
+                        console.log(data);
+                      window.location.href = 'thank_you.php';
+                    }
+ 
+                });
+                // alert(response.razorpay_payment_id);
+                // alert(response.razorpay_order_id);
+                // alert(response.razorpay_signature)
+            },
+             
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.on('payment.failed', function (response){
+                alert(response.error.code);
+                alert(response.error.description);
+                alert(response.error.source);
+                alert(response.error.step);
+                alert(response.error.reason);
+                alert(response.error.metadata.order_id);
+                alert(response.error.metadata.payment_id);
+        });
+        document.getElementById('rzp-button1').onclick = function(e){
+            rzp1.open();
+            e.preventDefault();
+        }
+    }
+</script>

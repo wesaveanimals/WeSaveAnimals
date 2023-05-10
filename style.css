@@ -1,0 +1,699 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Jaldi&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inika&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html,body{
+    scroll-behavior: smooth;
+}
+#container{
+    margin: 10px auto;
+    
+    width: 80%;
+    
+}
+#bar{
+    height: 30px;
+    background-color: #0B8C00;
+}
+#header{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inter',sans-serif;
+}
+#logo{
+    flex: 0.000000001%;
+    height: 85px;
+    flex-grow: 1;
+    
+}
+#menu{
+    margin-top: 30px;
+    flex: 85%;
+    display: flex;
+    flex-wrap:wrap ;
+}
+ul{
+    list-style: none;
+    
+    margin-left: 10px;
+}
+ul li a:hover{
+    background-color: #0B8C00;
+    
+}
+ul li{
+    display: inline-block;
+    position: relative;
+    
+}
+ul li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 0px;
+    padding: 8px 30px;
+    flex-shrink: 3;
+}
+ul li ul.dropdown{
+    display: none;
+    position: absolute;
+    margin-top: 0px;
+    padding: 2px;
+    z-index: 999;
+}
+ul li:hover ul.dropdown{
+    display: block;
+    background-color: white;
+}
+#donatebutton{
+    padding: 6px;
+    border-radius: 20px;
+    background-color: #0B8C00;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+#welcome{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+#welcomequote{
+    flex: 100%;
+    color: #FF6B00;
+    font-family: 'inter',sans-serif;
+    
+}
+.quotes{
+    margin: 10px auto;
+    display: flex;
+}
+.quotesimage{
+    flex: 1;
+    min-width: 400px;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+#option{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inter',sans-serif;
+    
+}
+.optioninfo{
+    min-width: 220px;
+    min-height: 250px;
+    /* margin-left: 80px; */
+    border-radius: 10px;
+    margin: 20px auto;
+}
+#donateinfo{
+    background-color: #0B8C00;
+    margin-left: auto;
+    text-align: center;
+    color: white;
+}
+#adoptinfo{
+    background-color: #59595B;
+    margin-left: auto;
+    text-align: center;
+    color: white;
+}
+#volunteerinfo{
+    margin-right: auto;
+    background-color:#FF6B00;
+    margin-left: auto;
+    text-align: center;
+    color: white;
+}
+.orangeknowmore{
+    padding: 6px 8px;
+    margin-top: 20px;
+    background-color: #FF6B00;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+.grayknowmore{
+    padding: 6px 8px;
+    margin-top: 20px;
+    background-color:#59595B;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.extraspace{
+    margin-top: 10px;
+}
+#details{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f4f4f4;
+    min-width: 400px;
+    max-width: 1200px;
+    margin: 0px auto;
+    border-radius: 20px;
+    padding-bottom: 30px;
+    font-family: 'inter',sans-serif;
+}
+#time{
+    flex: 50%;
+}
+#address{
+    flex: 50%;
+}
+.heading{
+    color: #FF6B00;
+    margin: 20px;
+}
+.paragraph{
+    margin:0px 20px; 
+}
+footer{
+    background-color: #0B8C00;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inter',sans-serif;
+}
+#socialmedia{
+    flex: 50%;
+    padding: 60px;
+    text-align: center; 
+    /* flex: 100%;
+    padding-bottom: 30px;
+    margin-top: auto; */
+}
+#subscribe{
+    flex: 50%;
+    text-align: end;
+    padding: 50px 90px;
+}
+.icons{
+    width: 35px;
+}
+.input{
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+}
+#copyrights{
+    color: white; 
+    text-align: center; 
+    flex: 2;
+    padding-bottom: 30px;
+    margin-top: auto;
+}
+#aboutus{
+    margin: 10px auto;
+    display: flex;
+    
+}
+#aboutusimage{
+    flex: 1;
+    min-width: 400px;
+    max-width: 1200px;
+    margin: 0px auto;
+    background-image: url("images/aboutus.png");
+    /* height: 600px; */
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+#aboutimg{
+    z-index: -1;
+}
+#aboutcaption{
+    z-index: 1;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    flex:none ;
+    color: white;
+    padding: 250px 0px;
+    font-size: 50px;
+    font-family: 'Jacques Francois',sans-serif;
+
+}
+#mission{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+#ourmission{
+    flex: 1;
+}
+.fontstyle{
+    font-family: 'jaldi';
+    
+    text-align: center;
+}
+#vision{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+#ourvision{
+    flex: 1;
+}
+#founder{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+#foundertitle{
+    flex: 1;
+}
+#founderdetail{
+    display: flex;
+    flex-wrap: wrap;
+}
+#aboutfounder{
+    flex: 75%;
+}
+#wesaveanimallogo{
+    flex: 25%;
+}
+#howitstarted{
+    display: flex;
+    flex-wrap: wrap;
+}
+#howitstartedtitle{
+    flex: 100%;
+}
+#howitstarteddetails{
+    flex: 1;
+}
+#contacttitle{
+    display: flex;
+    flex-wrap: wrap;
+}
+#contactustitle{
+    flex: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+#contactus{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    
+}
+#contactform{
+    flex: 50%;
+    
+}
+#addressdetails{
+    flex: 50%;
+}
+.inputstyle{
+    background-color: #EEEEEE;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 280px;
+    margin-left: 40px;
+}
+.formsubmit{
+    padding: 10px;
+    width: 80px;
+    border: none;
+    border-radius: 20px;
+    background-color: #0B8C00;
+    color: white;
+    margin-left: 130px;
+    cursor: pointer;
+    
+}
+.headingstyle{
+    font-size: 25px;
+    color: #FF6B00;
+}
+.contactcontent{
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+#maps{
+    display: flex;
+}
+#gmaps{
+    flex: 100%;
+}
+#location{
+    width: 100%;
+    border-radius: 15px;
+    margin: 50px 0px;
+}
+#donatetitle{
+    display: flex;
+    flex-wrap: wrap;
+}
+#donateustitle{
+    flex: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+#donate{
+    display: flex;
+    flex-wrap: wrap;
+}
+#donateus{
+    flex: 100%;
+    /* text-align: center; */
+    /* font-size: 40px; */
+    margin: 10px auto;
+    
+    flex-shrink: 3;
+    /* min-width: 400px;
+    max-width: 1200px; */
+    background-image: url("images/wesaveanimalsimages.png");
+    background-repeat:no-repeat ;
+    height: 520px;
+    margin-bottom: 80px;
+    border-radius: 20px;
+}
+
+#donateheading{
+    font-size: 30px;
+    color: #FF6B00;
+    text-align: center;
+    padding: 5px;
+}
+#donatediv{
+    top: 200px;
+    right: 50px;
+    background-color: #EAEAEA;
+    min-width: 150px;
+    max-width: 300px;
+    position: relative;
+    top: 80px;
+    left: 60px;
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+.donateinputstyle{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 230px;
+    margin-left: 10px;
+}
+.donateformsubmit{
+    padding: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    background-color: #0B8C00;
+    color: white;
+    margin-left: 80px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+#servicetitle{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#serviceustitle{
+    flex: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+#rescue{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#rescuetitle{
+    flex: 100%;
+    font-size: 20px;
+}
+#rescuedetail{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#rescueinfo{
+    flex: 100%;
+}
+#rescuepic{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.rescueimage{
+    flex: 25%;
+    
+}
+.rescuepictures{
+    min-width: 300px;
+    max-width: 100%;
+    height: 250px;
+    padding: 3px;
+    border-radius: 15px;
+}
+#medical{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#medicaltitle{
+    margin-top: 20px;
+    flex: 100%;
+    font-size: 20px;
+}
+#medicaldetail{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#medicalinfo{
+    flex: 100%;
+}
+#medicalpic{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.medicalimage{
+    flex: 25%;
+    
+}
+.medicalpictures{
+    min-width: 300px;
+    max-width: 100%;
+    height: 240px;
+    padding: 3px;
+    border-radius: 15px;
+}
+#rehab{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#rehabtitle{
+    margin-top: 20px;
+    flex: 100%;
+    font-size: 20px;
+}
+#rehabdetail{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#rehabinfo{
+    flex: 100%;
+}
+#rehabpic{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.rehabimage{
+    flex: 25%;
+    
+}
+.rehabpictures{
+    min-width: 405px;
+    max-width: 100%;
+    height: 270px;
+    padding: 3px;
+    border-radius: 15px;
+}
+#adopt{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#adopttitle{
+    margin-top: 20px;
+    flex: 100%;
+    font-size: 20px;
+}
+#adoptdetail{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#adoptinformation{
+    flex: 100%;
+}
+#adoptpic{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.adoptimage{
+    flex: 25%;
+    
+}
+.adoptpictures{
+    min-width: 405px;
+    max-width: 100%;
+    height: 310px;
+    padding: 3px;
+    border-radius: 15px;
+}
+#volunteer{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#volunteertitle{
+    margin-top: 20px;
+    flex: 100%;
+    font-size: 20px;
+}
+#volunteerdetail{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#volunteerinformation{
+    flex: 100%;
+}
+#volunteerpic{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.volunteerimage{
+    flex: 100%;
+    
+}
+.volunteerpictures{
+    min-width: 1205px;
+    max-width: 100%;
+    /* height: 310px; */
+    padding: 3px;
+    border-radius: 15px;
+
+}
+#gallerytitle{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#galleryustitle{
+    flex: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+#shelter{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#sheltertitle{
+    flex: 100%;
+    font-size: 20px;
+}
+#shelterdetail{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#shelterinfo{
+    flex: 100%;
+}
+#shelterpic{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.shelterimage{
+    flex: 25%;
+    
+}
+.shelterpictures{
+    min-width: 300px;
+    max-width: 100%;
+    height: 250px;
+    padding: 3px;
+    border-radius: 15px;
+}
+#aware{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#awaretitle{
+    flex: 100%;
+    font-size: 20px;
+}
+#awaredetail{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'inika',sans-serif;
+}
+#awareinfo{
+    flex: 100%;
+}
+#awarepic{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.awareimage1{
+    flex: 25%;
+    
+}
+.awarepictures1{
+    min-width: 320px;
+    max-width: 100%;
+    height: 450px;
+    padding: 3px;
+    border-radius: 15px;
+}
+.awareimage2{
+    flex: 70%;
+    
+}
+.awarepictures2{
+    min-width: 600px;
+    max-width: 100%;
+    height: 450px;
+    padding: 3px;
+    border-radius: 15px;
+}
